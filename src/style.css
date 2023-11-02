@@ -1,6 +1,18 @@
-body {
-  background: pink;
+h1,
+footer {
+  text-align: center;
 }
-h1 {
+#world-clock-wrapper {
+  border-style: solid;
+  border-radius: 5px;
+  margin: 20px;
+  padding: 20px;
+}
+.local-city-time {
+  text-align: right;
+}
+.city-selector,
+.city-list {
+  display: block;
   text-align: center;
 }
