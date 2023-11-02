@@ -1,4 +1,3 @@
-h1,
 footer {
   text-align: center;
 }
@@ -7,12 +6,29 @@ footer {
   border-radius: 5px;
   margin: 20px;
   padding: 20px;
+  background-color: black;
 }
-.local-city-time {
-  text-align: right;
-}
-.city-selector,
-.city-list {
+#city-name-selector {
   display: block;
-  text-align: center;
+  width: 100%;
+  font-size: 16px;
+  color: white;
+  background-color: black;
+  border-radius: 30px;
+  border-color: #e8952d;
+  padding: 10px 20px 10px 20px;
+  margin-bottom: 20px;
+  appearance: none;
+}
+#city-name-selector:hover {
+  cursor: pointer;
+}
+#city-info {
+  color: ;
+}
+.world-clock-heading {
+  color: #e8952d;
+  font-size: 40px;
+  font-style: normal;
+  padding-bottom: 10px;
 }

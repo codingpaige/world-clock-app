@@ -14,36 +14,38 @@
   </head>
   <body>
     <div class="container text-center" id="world-clock-wrapper">
-      <h1>World Clock</h1>
-      <div class="city-selector">
-        <select name="cities" id="city-names">
-          <option value="">Choose a city</option>
-          <option value="brisbane">Brisbane</option>
-          <option value="san-francisco">San Francisco</option>
-          <option value="lisbon">Lisbon</option>
-        </select>
-      </div>
-      <div class="brisbane-info">
-        <div class="city-brisbane">Brisbane</div>
-        <div class="time">12:02:13PM</div>
-        <div class="date">Nov 21st, 2023</div>
-        <img src="http://openweathermap.org/img/wn/11n@2x.png" alt="" />
-      </div>
-      <div class="san-francisco-info">
-        <div class="city-san-fran">San Francisco</div>
-        <div class="time">12:02:13PM</div>
-        <div class="date">Nov 21st, 2023</div>
-        <img src="http://openweathermap.org/img/wn/11n@2x.png" alt="" />
-      </div>
-      <div class="lisbon-info">
-        <div class="city-lisbon">Lisbon</div>
-        <div class="time">12:02:13PM</div>
-        <div class="date">Nov 21st, 2023</div>
-        <img src="http://openweathermap.org/img/wn/11n@2x.png" alt="" />
+      <div class="world-clock-heading">World Clock</div>
+      <select name="cities" id="city-name-selector">
+        <option value="">Choose a city</option>
+        <option value="brisbane">Brisbane</option>
+        <option value="san-francisco">San Francisco</option>
+        <option value="lisbon">Lisbon</option>
+      </select>
+      <div class="row" id="city-info">
+        <div class="col-8">
+          <div class="city-brisbane">Brisbane</div>
+          <div class="time">12:02:13PM</div>
+          <div class="date">Nov 21st, 2023</div>
+        </div>
+        <div class="col-4">
+          <img src="http://openweathermap.org/img/wn/11n@2x.png" alt="" />
+        </div>
+        <div class="san-francisco-info">
+          <div class="city-san-fran">San Francisco</div>
+          <div class="time">12:02:13PM</div>
+          <div class="date">Nov 21st, 2023</div>
+          <img src="http://openweathermap.org/img/wn/11n@2x.png" alt="" />
+        </div>
+        <div class="lisbon-info">
+          <div class="city-lisbon">Lisbon</div>
+          <div class="time">12:02:13PM</div>
+          <div class="date">Nov 21st, 2023</div>
+          <img src="http://openweathermap.org/img/wn/11n@2x.png" alt="" />
+        </div>
       </div>
     </div>
     <footer>
-      This project is coded by Paige and is
+      This project is coded by <strong>Paige N.</strong> and is
       <a href="https://github.com/codingpaige/world-clock-app" target="_blank"
         >open-sourced on Github</a
       >
