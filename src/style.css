@@ -1,13 +1,6 @@
 footer {
   text-align: center;
 }
-#world-clock-wrapper {
-  border-style: solid;
-  border-radius: 5px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: black;
-}
 #city-name-selector {
   display: block;
   width: 100%;
@@ -17,7 +10,7 @@ footer {
   border-radius: 30px;
   border-color: #e8952d;
   padding: 10px 20px 10px 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   appearance: none;
 }
 #city-name-selector:hover {
@@ -26,9 +19,31 @@ footer {
   color: #e8952d;
   transition: ease-in-out 150ms;
 }
+#world-clock-wrapper {
+  border-style: solid;
+  border-radius: 5px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: black;
+  box-shadow: rgba(176, 154, 132, 0.5) 0px 7px 29px 0px;
+}
+#city-info {
+  text-align: left;
+  padding-left: 20px;
+}
+#weather-icon {
+  text-align: right;
+  padding-right: 10px;
+}
 .container {
   color: white;
   justify-content: space-between;
+}
+.border-bottom {
+  margin-bottom: 20px;
+  outline-style: dashed;
+  outline-width: 0.02px;
+  opacity: 0.2;
 }
 .world-clock-heading {
   color: #e8952d;
@@ -36,6 +51,14 @@ footer {
   font-style: normal;
   padding-bottom: 10px;
 }
+
 .time {
   font-size: 40px;
+}
+.date {
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+}
+.am-pm {
+  font-size: 20px;
 }
