@@ -4,7 +4,7 @@ footer {
 #world-clock-wrapper {
   border-style: solid;
   border-radius: 5px;
-  margin: 20px;
+  margin: 40px auto;
   padding: 20px;
   background-color: black;
 }
@@ -22,9 +22,14 @@ footer {
 }
 #city-name-selector:hover {
   cursor: pointer;
+  border-color: white;
+  color: #e8952d;
+  transition: ease-in-out 150ms;
 }
+.container,
 #city-info {
-  color: ;
+  color: white;
+  justify-content: space-between;
 }
 .world-clock-heading {
   color: #e8952d;
