@@ -26,8 +26,7 @@ footer {
   color: #e8952d;
   transition: ease-in-out 150ms;
 }
-.container,
-#city-info {
+.container {
   color: white;
   justify-content: space-between;
 }
@@ -36,4 +35,7 @@ footer {
   font-size: 40px;
   font-style: normal;
   padding-bottom: 10px;
+}
+.time {
+  font-size: 40px;
 }
