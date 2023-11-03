@@ -55,6 +55,11 @@ footer {
 .time {
   font-size: 40px;
 }
+
+.time small {
+  font-size: 14px;
+  vertical-align: middle;
+}
 .date {
   margin-bottom: 20px;
   padding-bottom: 5px;
