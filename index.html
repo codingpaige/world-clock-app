@@ -17,15 +17,15 @@
   <body>
     <div class="container text-center" id="world-clock-wrapper">
       <div class="world-clock-heading">World Clock</div>
-      <select name="cities" id="city-name-selector">
+      <select id="city-name-selector">
         <option value="">Choose a city</option>
-        <option value="brisbane">Brisbane</option>
-        <option value="san-francisco">San Francisco</option>
-        <option value="lisbon">Lisbon</option>
+        <option value="Australia/Brisbane">Brisbane</option>
+        <option value="America/New_York">New York</option>
+        <option value="Asia/Tokyo">Tokyo</option>
       </select>
-      <div class="row">
+      <div class="row" id="cities">
         <div class="col-6" id="city-brisbane">
-          <div class="city">Brisbane</div>
+          <div class="city"></div>
           <div class="time"></div>
           <div class="date"></div>
         </div>
@@ -34,7 +34,7 @@
         </div>
         <span class="border-bottom"></span>
         <div class="col-6" id="city-new-york">
-          <div class="city">New York</div>
+          <div class="city"></div>
           <div class="time"></div>
           <div class="date"></div>
         </div>
@@ -43,7 +43,7 @@
         </div>
         <span class="border-bottom"></span>
         <div class="col-6" id="city-tokyo">
-          <div class="city">Tokyo</div>
+          <div class="city"></div>
           <div class="time"></div>
           <div class="date"></div>
         </div>
