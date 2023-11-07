@@ -10,7 +10,9 @@ function updateTime() {
     brisbaneTime.innerHTML = moment()
       .tz("Australia/Brisbane")
       .format("HH:mm:ss [<small>]A[</small>]");
+    getCurrentWeather("Brisbane");
   }
+
   // New York
   let newYorkElement = document.querySelector("#city-new-york");
   if (newYorkElement) {
@@ -21,6 +23,7 @@ function updateTime() {
       .tz("America/New_York")
       .format("HH:mm:ss [<small>]A[</small>]");
   }
+
   // Tokyo
   let tokyoElement = document.querySelector("#city-tokyo");
   if (tokyoElement) {
@@ -31,6 +34,19 @@ function updateTime() {
       .tz("Asia/Tokyo")
       .format("HH:mm:ss [<small>]A[</small>]");
   }
+}
+
+function displayWeather(response) {
+  let brisbaneWeather = document.querySelector("#weather-brisbane");
+  brisbaneWeather.innerHTML = `<div class="col" id="weather-brisbane">
+          <img src="http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png" alt="" />
+        </div>`;
+}
+
+function getCurrentWeather(city) {
+  let apiKey = "294ff1c8d42a84a37badb92d65cbfb69";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeather);
 }
 
 function updateCity(event) {
