@@ -21,16 +21,19 @@ footer {
 }
 #world-clock-wrapper {
   border-style: solid;
-  border-radius: 5px;
+  border-radius: 10px;
   margin: 40px auto;
   padding: 30px;
   background-color: black;
   box-shadow: rgba(176, 154, 132, 0.5) 0px 7px 29px 0px;
 }
-#weather-icon {
+
+#weather-brisbane,
+#weather-tokyo,
+#weather-new-york {
   text-align: right;
-  padding-right: 10px;
 }
+
 .container {
   color: white;
   justify-content: space-between;
