@@ -30,7 +30,8 @@ footer {
 
 #weather-brisbane,
 #weather-tokyo,
-#weather-new-york {
+#weather-new-york,
+#weather-icon {
   text-align: right;
 }
 
