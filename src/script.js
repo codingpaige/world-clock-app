@@ -10,7 +10,7 @@ function updateTime() {
     brisbaneTime.innerHTML = moment()
       .tz("Australia/Brisbane")
       .format("HH:mm:ss [<small>]A[</small>]");
-    getCurrentWeather("Brisbane");
+    getCurrentWeather("Brisbane", document.querySelector("#weather-brisbane"));
   }
 
   // New York
@@ -22,6 +22,7 @@ function updateTime() {
     newYorkTime.innerHTML = moment()
       .tz("America/New_York")
       .format("HH:mm:ss [<small>]A[</small>]");
+    getCurrentWeather("New York", document.querySelector("#weather-new-york"));
   }
 
   // Tokyo
@@ -33,20 +34,18 @@ function updateTime() {
     tokyoTime.innerHTML = moment()
       .tz("Asia/Tokyo")
       .format("HH:mm:ss [<small>]A[</small>]");
+    getCurrentWeather("Tokyo", document.querySelector("#weather-tokyo"));
   }
 }
 
-function displayWeather(response) {
-  let brisbaneWeather = document.querySelector("#weather-brisbane");
-  brisbaneWeather.innerHTML = `<div class="col" id="weather-brisbane">
-          <img src="http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png" alt="" />
-        </div>`;
-}
-
-function getCurrentWeather(city) {
+function getCurrentWeather(city, element) {
   let apiKey = "294ff1c8d42a84a37badb92d65cbfb69";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayWeather);
+  axios.get(apiUrl).then((response) => {
+    element.innerHTML = `<div class="col" id="">
+<img src="http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png" alt="" />
+</div>`;
+  });
 }
 
 function updateCity(event) {
@@ -62,13 +61,17 @@ function updateCity(event) {
         <div class="col-6">
           <div class="city">${cityName}</div>
           <div class="time">${cityTime.format(
-            "HH:mm:ss "
+            "HH:mm "
           )}<small>${cityTime.format("A")}</small>
           </div>
           <div class="date">${cityTime.format("MMM Do, YYYY")}</div>
         </div>
+         <div class="col" id="weather-icon">
+          <img src="" alt="" />
+        </div>
         <a href="/">All cities</a>
         `;
+  getCurrentWeather(cityName, document.querySelector("#weather-icon"));
 }
 
 updateTime();
